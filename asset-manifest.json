@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/matriz-complejidad/static/css/main.47b8d9cd.css",
-    "main.js": "/matriz-complejidad/static/js/main.3b636ca6.js",
+    "main.js": "/matriz-complejidad/static/js/main.05f04c9f.js",
     "static/js/787.4d63e50f.chunk.js": "/matriz-complejidad/static/js/787.4d63e50f.chunk.js",
     "index.html": "/matriz-complejidad/index.html",
     "main.47b8d9cd.css.map": "/matriz-complejidad/static/css/main.47b8d9cd.css.map",
-    "main.3b636ca6.js.map": "/matriz-complejidad/static/js/main.3b636ca6.js.map",
+    "main.05f04c9f.js.map": "/matriz-complejidad/static/js/main.05f04c9f.js.map",
     "787.4d63e50f.chunk.js.map": "/matriz-complejidad/static/js/787.4d63e50f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47b8d9cd.css",
-    "static/js/main.3b636ca6.js"
+    "static/js/main.05f04c9f.js"
   ]
 }
