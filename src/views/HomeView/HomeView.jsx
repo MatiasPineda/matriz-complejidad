@@ -1,10 +1,27 @@
-import { Form, Radio, Button } from "antd";
+import { Form } from "antd";
 import "./HomeView.css";
 import { useState } from "react";
 import TechnologyGrid from "../../components/Technology/TechnologyGrid";
 import BusinessGrid from "../../components/Business/BusinessGrid";
 import Card from "../../components/Card";
 import ResultGrid from "../../components/Grid/ResultGrid";
+import styled from "styled-components";
+
+const Boton = styled.div`
+  background-color: lightblue;
+  width: 10rem;
+  max-width: 150px;
+  padding: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px grey;
+`;
+
+const Title = styled.h1`
+  margin-left: 2rem;
+  font-size: 3rem;
+`;
 
 function HomeView() {
   const [selected, setSelected] = useState({});
@@ -34,22 +51,34 @@ function HomeView() {
 
   return (
     <div>
+      <Title>Matriz de complejidad</Title>
       <Form form={form}>
         <Card>
+          <h1>Contexto de negocio</h1>
           <BusinessGrid />
         </Card>
 
         <Card>
+          <h1>Contexto tecnológico</h1>
           <TechnologyGrid />
         </Card>
         <Card>
-          <Button type="button" onClick={helperFunction}>
+          <Boton type="button" onClick={helperFunction}>
             {Object.keys(selected).length ? (
               <span>Actualizar Matriz</span>
             ) : (
               <span>Ver Matriz</span>
             )}
-          </Button>
+          </Boton>
+
+          <div>
+            <p>Riesgo bajo: Cuando ambos puntajes son menores o iguales a 5.</p>
+            <p>
+              Riesgo medio: Cuando cualquiera de sus puntajes es mayor a 5 y
+              menor o igual a 11.
+            </p>
+            <p>Riesgo Alto: Cuando cualquiera de sus puntajes es mayor a 11.</p>
+          </div>
 
           <div style={{ height: 50 }} />
 

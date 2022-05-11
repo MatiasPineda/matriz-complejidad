@@ -26,13 +26,13 @@ const XAxis = styled.div`
 const GridWrapper = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   background-color: #2196f3;
   padding: 10px;
   height: 30vw;
   width: 30vw;
-  min-height: 150px;
-  min-width: 150px;
+  min-height: 30vw;
+  min-width: 30vw;
 `;
 
 const LowSection = styled.div`
@@ -46,7 +46,7 @@ const LowSection = styled.div`
 const MediumSection = styled.div`
   background-color: #f7cd40;
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  adding: 20px;
   font-size: 30px;
   text-align: center;
 `;
@@ -86,7 +86,7 @@ function ResultGrid(props) {
           <XAxis>Tecnología</XAxis>
         </Row>
       </GridContainer>
-      <div style={{width: "4vw"}} />
+      <div style={{width: "4vw", "min-width": "4vw"}} />
       <Summary values={values} />
     </Row>
   );
@@ -100,8 +100,8 @@ const Punto = styled.div`
   background-color: blue;
   border-radius: 50%;
   display: inline-block;
-  bottom: calc(5px + 30vw * ${(props) => props.values.business} / 16);
-  left: calc(5px + 30vw * ${(props) => props.values.technology} / 16);
+  bottom: calc(5px + (30vw * ${(props) => props.values.business} / 16));
+  left: calc(5px + (30vw * ${(props) => props.values.technology} / 16));
 `;
 
 export default ResultGrid;

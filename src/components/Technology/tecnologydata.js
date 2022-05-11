@@ -64,11 +64,11 @@ export default {
       },
     },
     {
-      attribute: "Pregunta inventada.",
+      attribute: "Definición de perfiles (accesos) y procedimientos.",
       zone: {
-        1: "r1.",
-        2: "r2.",
-        3: "r3.",
+        1: "Claramente definidos.",
+        2: "Vagamente desarrollados.",
+        3: "Inexistentes.",
       },
     },
   ],
